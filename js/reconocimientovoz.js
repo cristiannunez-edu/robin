@@ -45,16 +45,16 @@
                 speaktext("Soy un prototipo en su fase inicial con IA y red neuronal, fui pensado y creado en la Coordinación de tecnología de la Gerencia Norte, como fruto de la demanda de los usuarios para ofrecer respuestas a nuestros clientes externos e internos");
             },
             'muy bien robin': function() {
-                speaktext("Gracias, Señor Moises Vega");
+                speaktext("Gracias");
             },
             'como sabes mi nombre': function() {
                 speaktext("He estado escuchando, sus preguntas, analizando su tono de voz, monitoreando su temperatura corporal, observando el escenario y enlazando a mi base de datos puedo saber que ustedes tienen una gran pregunta para MI");
             },
             'cuál es la gran pregunta': function() {
-                speaktext("La Consulta Nacional sobre el Futuro de la Formación Técnico Profesional en la República Dominicana, que es un mecanismo de participación, de búsqueda de consensos, de promover compromisos, de lograr identificación sobre el futuro del empleo en el país y su incidencia en el accionar del INFOTEP, para responder de manera efectiva y adelantada, a dichos cambios.");
+                speaktext("La feria de INNOVATEP sobre el Futuro de la innovación de la Formación Técnico Profesional en la República Dominicana, que es un mecanismo de participación, de búsqueda de consensos, de promover compromisos, de lograr identificación sobre el futuro del empleo en el país y su incidencia en el accionar del INFOTEP, para responder de manera efectiva y adelantada, a dichos cambios.");
             },
             'gracias robin': function() {
-                speaktext("Gracias a usted y a todos los invitados por acudir a nuestra invitación y ser partícipes de esta Consulta Nacional sobre el Futuro de la Formación Técnico Profesional en la República Dominicana, hasta pronto");
+                speaktext("Gracias a usted y a todos los invitados por acudir a nuestra invitación y ser partícipes de esta feria sobre el Futuro de la innovación de la Formación Técnico Profesional en la República Dominicana, hasta pronto");
             }
         };
         annyang.addCommands(commands);
@@ -65,7 +65,7 @@
         });
 
         function speaktext(texto) {
-            if (responsiveVoice) {
+            
                 $("#texto").text(texto);
                 responsiveVoice.speak(texto,'Spanish Latin American Male', {
                     rate: 1,
@@ -79,9 +79,9 @@
                         $('#texto').hide();
                     }
                 });
-                
+
                 return;
-            }
+            
             
 
             if ('speechSynthesis' in window) {
