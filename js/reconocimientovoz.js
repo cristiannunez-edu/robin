@@ -65,6 +65,11 @@
         });
 
         function speaktext(texto) {
+            if (responsiveVoice) {
+                responsiveVoice.speak(texto,'Spanish Latin American Male');
+            }
+            
+
             if ('speechSynthesis' in window) {
                 var msg = new SpeechSynthesisUtterance();
                 $("#texto").text(texto);
