@@ -66,7 +66,20 @@
 
         function speaktext(texto) {
             if (responsiveVoice) {
-                responsiveVoice.speak(texto,'Spanish Latin American Male');
+                $("#texto").text(texto);
+                responsiveVoice.speak(texto,'Spanish Latin American Male', {
+                    rate: 1,
+                    pitch: 1,
+                    onstart: () => {
+                        $('#music-bars').show();
+                        $('#texto').show();
+                    }, 
+                    onend: () => {
+                        $('#music-bars').hide();
+                        $('#texto').hide();
+                    }
+                });
+                
                 return;
             }
             
