@@ -67,6 +67,7 @@
         function speaktext(texto) {
             if (responsiveVoice) {
                 responsiveVoice.speak(texto,'Spanish Latin American Male');
+                return;
             }
             
 
